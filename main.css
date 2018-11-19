@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+/* NOTE: THIS IS PURE FOR TESTING */
+
+html,body{
+  margin: 16px; 
+  color: black;
+  /*body {
+  font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+  For example, if we want the our font size in a range where 14px is the minimum size at the smallest viewport width of 300px and where 26px is the maximum size at the largest viewport width of 1600px, then our equation looks like this:
+  }*/
+  font-size: calc(4px + (16 - 4) * ((100vw - 320px) / (1920 - 320))); /*calc(0.75em + 0.25vmin);*/
+  font-family: 'Roboto', 'sans-serif';
+}
+/*Authors should avoid using percentages in paddings or margins on grid items entirely, as they will get different behavior in different browsers.*/
+/*variables de css3*/
+::root {
+  
+}
+
+*,
+*::after,
+*::before{
+  box-sizing: border-box;
+}
+
+.grid-container-viewport{
+ display: grid;
+ grid-template-columns: repeat(6,minmax(1rem,auto));
+ grid-template-rows: repeat(6,minmax(1rem,auto));
+ grid-gap: 1rem;
+ grid-template-areas: 
+ "hed hed hed hed hed hed" 
+ "s1 s1 s1 s1 s1 s1"
+ "s2 s2 s2 s2 s2 s2"
+ "s3 s3 s3 s3 s3 s3"
+ "s4 s4 s4 s5 s5 s5"
+ "s4 s4 s4 s5 s5 s5"
+}
+.grid-header{
+  font-size: 1.5em;
+  grid-area: hed;
+  display: flex;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.grid-navbar{
+  display: flex;
+  flex: 1 1 auto; /*flex-grow , flex-shrink, flex-basis*/
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0px 20px 0px 20px; 
+
+}
+.grid-navbar > div{
+ margin: 0px;
+
+}
+
+.grid-navbar .item:nth-child(7){
+ display: inline-flex;
+ flex-direction: column;
+}
+
+.item > p1,p2 {
+margin: 0;
+}
+
+.sec1{
+  grid-area: s1;
+}
+.sec2{
+  grid-area: s2;
+}
+.sec3{
+  grid-area: s3;
+}
+.sec4{
+  grid-area: s4;
+  text-align: justify;
+}
+.sec5{
+  grid-area: s5;
+  text-align: justify;
+}
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.grid-container-viewport{
+	display: grid; grid-gap: var(--grid-gap);
+	grid-template-columns: repeat(12,minmax(0,1fr));
+	grid-template-rows: repeat(6,minmax(3rem,auto));
+  grid-template-areas: 
+  "header header header header header header header header header header header header"
+}
+
+.header{  
+	display: grid; grid-gap: var(--grid-gap); grid-area: header;
+  grid-template-columns:repeat(auto-fill,1fr);
+  grid-template-rows: minmax(3rem,auto) repeat(2,minmax(10vmin,1fr));
+   
+}
+.grid-navbar{
+  display: grid; grid-gap: var(--grid-gap); 
+  grid-template-columns: 20vw repeat(5,minmax(0,1fr)) 20vw;
+  grid-template-row: 3rem; align-items: center; justify-items: center;
+  padding: 4px 16px 4px 16px; background-color: #E3E3E3;
+}
+
+.grid-navbar .item{
+  font-size: .75em;
+  text-align: center;
+}
+
+div .item:nth-child(1){ justify-self: start;}
+div .item:nth-child(7){ display:grid; grid: 1fr 1fr / 1fr ; justify-self: end;}
+
+@media only screen and (max-width: 1280px){
+  
+}
+*/
+
